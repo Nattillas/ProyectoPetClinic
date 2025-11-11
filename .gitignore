@@ -1,0 +1,30 @@
+# Maven build directories
+target
+*/target
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Java compiled files
+*.class
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Karate reports (if you don't want to commit them)
+# e2e/karate/target/karate-reports/

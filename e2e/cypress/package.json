@@ -1,0 +1,28 @@
+{
+  "name": "petclinic-cypress-e2e",
+  "version": "1.0.0",
+  "description": "Cypress E2E tests for PetClinic API using Cucumber",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "cypress:run:headless": "cypress run --headless",
+    "test": "cypress run --headless"
+  },
+  "keywords": [
+    "cypress",
+    "cucumber",
+    "e2e",
+    "petclinic",
+    "api",
+    "swagger"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^13.6.0",
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "esbuild": "^0.19.8"
+  }
+}
