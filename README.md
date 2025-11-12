@@ -1,25 +1,28 @@
 # Proyecto PetClinic
 
-Este repositorio contiene la aplicación completa PetClinic con la aplicación principal y el framework de pruebas End-to-End.
+Este repositorio contiene un mini proyecto Java con Spring Boot que implementa el OpenAPI de PetClinic y un framework de pruebas End-to-End (Karate, Java-Cucumber y Cypress).
 
 ## 📈 Acciones requeridas
 
 - [ ] Repasar la estructura de proyecto y leer los READMEs para mayor claridad.
 - [ ] Verificar que el proyecto se puede ejecutar y arrancar correctamente
 - [ ] Generar una colección de Postman o similar en la que ejecutemos una (1) llamada a la API (adjuntar colección, script o captura de pantalla)
-- [ ] Verificar cuantos tests unitarios y de ejecución se están ejecutando y cual es su resultado. Aportar evidencias (reporte, captura de pantalla,etc.)
+- [ ] Verificar cuantos tests **unitarios** y de **integración** se están ejecutando y cual es su resultado. Aportar evidencias (reporte, captura de pantalla,etc.)
 - [ ] Definir un (1) escenario en Karate **O** java-cucumber (el que se prefiera) que cubra un flujo básico de la aplicación para pruebas E2E de backend.
-      Ej: Verificar que si añadimos una mascota vía API, podemos recuperarla después vía API o vía consulta SQL
+      
+      * Ej: *Verificar que si añadimos una mascota vía API, podemos recuperarla después vía API o vía consulta SQL*
 - [ ] Completar un (1) escenario de Cypress donde verifiquemos que podemos interactuar con la UI de Swagger (demo) para simular un escenario de test contra una aplicación web (frontend).
-      Ej: Obtener el listado de mascotas
+      
+      * Ej: *Obtener el listado de mascotas*
 
- !! La solución no tiene un tiempo límite. No obstante, completar las validaciones e implementar los escenarios (RECUERDA que sólo se pide 1 escenario para e2e backend y 1 para frontend) se puede completar en 25 minutos.
+ | !! La solución no tiene un tiempo límite. No obstante, completar las validaciones e implementar los escenarios (RECUERDA que sólo se pide 1 escenario para e2e backend y 1 para frontend) se puede completar en 25 minutos.
 
 ## 📦 Entregables
 
 Una vez completada la prueba puede hacernos llegar los cambios introducidos de una de las siguientes formas:
-**A)** (Preferible) Cree un repositorio propio en Github. Suba el código y remítanos el link. Es importante que el repositorio sea público.
-**B)** Comprima el proyecto en .zip y reenvíenos la prueba. (No olvide eliminar las carpetas /target y /node_modules para reducir el tamaño del mismo)
+
+ - **A)** *(Preferible)* Cree un repositorio propio en Github. Suba el código y remítanos el link. Es importante que el repositorio sea público.
+ - **B)** Comprima el proyecto en .zip y reenvíenos la prueba. (No olvide eliminar las carpetas */target* y */node_modules* para reducir el tamaño del mismo)
  
 ## 📁 Estructura del Proyecto
 
