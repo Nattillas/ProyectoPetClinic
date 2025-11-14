@@ -1,0 +1,17 @@
+{
+  "id": 0,
+  "name": "Mili",
+  "birthDate": "2020-11-30",
+  "type": {
+    "id": 3,
+    "name": "lizard"
+  },
+  "owner": {
+    "id": 2,
+    "firstName": "Betty",
+    "lastName": "Davis",
+    "address": "638 Cardinal Ave.",
+    "city": "Sun Prairie",
+    "telephone": "6085551749"
+  }
+}
