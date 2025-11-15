@@ -17,6 +17,9 @@ Feature: Swagger UI API Testing
     Given I am on the Swagger UI documentation page
     When I expand the "Pets" section
     And I click on the GET "/api/pets" endpoint
-    And I click the "Try it out" button
+    And I click the "Try it out" endpoint
+    And I click the "Execute" button
+    Then I should see a response with status code 200
+
     # TODO: Implementar los pasos restantes para completar la prueba del endpoint
     # Sugerencia: Agregar pasos para "Execute" y validación de respuesta

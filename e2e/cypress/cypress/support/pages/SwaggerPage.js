@@ -20,8 +20,7 @@ class SwaggerPage extends BasePage {
       // Specific sections
       petsSection: 'h3:contains("Pets")',
       petTypesSection: 'h3:contains("Pet Types")'
-    };
-
+    }
     // Initialize components
     this.endpoint = new SwaggerEndpoint();
     this.responseSection = new ResponseSection();
@@ -80,6 +79,18 @@ class SwaggerPage extends BasePage {
 
   getResponseComponent() {
     return this.responseSection;
+  }
+
+  clickTryItOut() {
+    return this.endpoint.clickTryItOut();
+  }
+
+  clickExecute() {
+    return this.endpoint.clickExecute();
+  }
+
+  verifyResponseStatus(expectedStatus) {
+    return this.responseSection.verifyStatusCode(expectedStatus);
   }
 }
 

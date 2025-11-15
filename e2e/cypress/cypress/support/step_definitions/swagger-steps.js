@@ -28,6 +28,18 @@ When('I click on the GET {string} endpoint', (endpoint) => {
   swaggerPage.clickEndpoint(endpoint);
 });
 
+When('I click the {string} endpoint', () => {
+    swaggerPage.clickTryItOut();
+});
+
+When('I click the {string} button', () => {
+    swaggerPage.clickExecute();
+});
+
+Then('I should see a response with status code {int}', (statusCode) => {
+    swaggerPage.verifyResponseStatus(statusCode);
+});
+
 // UI verification steps
 Then('I should see the API documentation title', () => {
   swaggerPage.verifyApiTitle();

@@ -35,7 +35,8 @@ public class PetController {
         this.petService = petService;
         this.petMapper = petMapper;
     }
-    
+
+
     @Operation(summary = "Get all pets", description = "Retrieve a list of all pets")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Successfully retrieved pets",

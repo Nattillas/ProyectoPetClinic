@@ -20,9 +20,9 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "cypress": "^13.6.0",
-    "@badeball/cypress-cucumber-preprocessor": "^20.0.1",
+    "@badeball/cypress-cucumber-preprocessor": "^23.2.1",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
-    "esbuild": "^0.19.8"
+    "cypress": "^13.6.0",
+    "esbuild": "^0.27.0"
   }
 }
