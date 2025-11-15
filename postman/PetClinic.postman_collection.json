@@ -1,0 +1,327 @@
+{
+	"info": {
+		"_postman_id": "97c7c280-52c2-4fed-9dfc-91642f569392",
+		"name": "PetClinic",
+		"description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50057062",
+		"_collection_link": "https://nataliapilla7-7331947.postman.co/workspace/Natt's-Workspace~40b8954f-cc71-4a13-8935-9e969f4079c1/collection/50057062-97c7c280-52c2-4fed-9dfc-91642f569392?action=share&source=collection_link&creator=50057062"
+	},
+	"item": [
+		{
+			"name": "Get all Pet Types",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"packages": {},
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/petclinic/api/pet-types",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"petclinic",
+						"api",
+						"pet-types"
+					]
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": []
+		},
+		{
+			"name": "Get Pets by Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL}}/petclinic/api/pets/1",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"petclinic",
+						"api",
+						"pets",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a pet by Id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Leo\",\r\n    \"birthDate\": \"2020-09-07\",\r\n    \"type\": {\r\n        \"id\": 1,\r\n        \"name\": \"cat\"\r\n    },\r\n    \"owner\": {\r\n        \"id\": 1,\r\n        \"firstName\": \"George\",\r\n        \"lastName\": \"Franklin\",\r\n        \"address\": \"110 W. Liberty St.\",\r\n        \"city\": \"Madison\",\r\n        \"telephone\": \"6085551023\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/petclinic/api/pets/1",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"petclinic",
+						"api",
+						"pets",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Pets by Id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL}}/petclinic/api/pets/6",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"petclinic",
+						"api",
+						"pets",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Pets",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL}}/petclinic/api/pets",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"petclinic",
+						"api",
+						"pets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new pet",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 0,\n    \"name\": \"Mili\",\n    \"birthDate\": \"2020-11-30\",\n    \"type\": {\n        \"id\": 3,\n        \"name\": \"lizard\"\n    },\n    \"owner\": {\n        \"id\": 2,\n        \"firstName\": \"Betty\",\n        \"lastName\": \"Davis\",\n        \"address\": \"638 Cardinal Ave.\",\n        \"city\": \"Sun Prairie\",\n        \"telephone\": \"6085551749\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/petclinic/api/pets",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"petclinic",
+						"api",
+						"pets"
+					]
+				},
+				"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+			},
+			"response": []
+		},
+		{
+			"name": "Search pets by name",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/petclinic/api/pets/search?name=leo",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"petclinic",
+						"api",
+						"pets",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "leo"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get pets by owner",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL}}/petclinic/api/pets/owner/1",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"petclinic",
+						"api",
+						"pets",
+						"owner",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
